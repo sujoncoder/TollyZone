@@ -1,14 +1,18 @@
-import Footer from "./components/shared/Footer";
-import Header from "./components/shared/Header";
+import AllServices from "./components/home/AllServices";
 
 export default function Home() {
   return (
-    <main>
-      <Header />
-      <h1 className="text-center font-semibold my-20 text-cyan-300 text-4xl">
-        Hello developers
+    <main className="h-screen">
+      <h1 className="text-center font-semibold text-pink-500 text-4xl">
+        Wellcome to ToolyZone
       </h1>
-      <Footer />
+      <p className="text-center font-semibold text-xl text-purple-400 my-4">
+        A digital service solution platform tools.
+      </p>
+
+      <div>
+        <AllServices />
+      </div>
     </main>
   );
 }

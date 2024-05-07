@@ -2,7 +2,7 @@ import Logo from "../Logo";
 
 const Header = () => {
   return (
-    <div>
+    <div className="bg-slate-200 px-20">
       <Logo />
     </div>
   );
