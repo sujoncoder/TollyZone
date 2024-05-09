@@ -22,28 +22,21 @@ const ThumbnailDownload = () => {
     return match && match[2].length === 11 ? match[2] : null;
   };
 
+  // extract videoId
   const videoId = extractVideoId(inputUrl);
-  console.log(videoId);
 
   useEffect(() => {
-    const downloadThumbnail = async (videoId) => {
-      console.log(videoId);
-      try {
-        const response = await fetch(
-          `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
-        );
-        console.log(response);
-        setThumbnailUrl(response.url);
-      } catch (error) {}
-    };
-    downloadThumbnail();
+    const imageThumbnailUrl = videoId
+      ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+      : "";
+    setThumbnailUrl(imageThumbnailUrl);
   }, [videoId]);
 
   return (
     <>
       <TittleText />
       <SearchInput onSearchInput={handleInput} />
-      <ThumbnailCard />
+      <ThumbnailCard onThumbnailUrl={thumbnailUrl} onVideoId={videoId} />
     </>
   );
 };

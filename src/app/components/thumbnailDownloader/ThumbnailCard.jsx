@@ -1,21 +1,31 @@
+import { saveAs } from "file-saver";
 import Image from "next/image";
-// import ThumbnailImage from "../../../../public/assets/Thumbnail.png"
 import ThumbnailImage from "../../../../public/assets/Thumbnail.png";
+import Button from "../shared/Button";
 
-const ThumbnailCard = () => {
+const ThumbnailCard = ({ onThumbnailUrl, onVideoId }) => {
+  const handleDownload = () => {
+    saveAs(onThumbnailUrl, "thumbnail.jpg");
+  };
   return (
     <div className="my-10 flex justify-center items-center">
-      <div className="rounded border-slate-500">
+      <div className="rounded border-slate-500 relative">
         <Image
-          className="rounded shadow-xl hover:scale-105 duration-500"
-          src={ThumbnailImage}
-          width={500}
-          height={500}
+          className="rounded shadow"
+          src={onThumbnailUrl || ThumbnailImage}
+          width={700}
+          height={700}
+          quality={100}
           alt="ThumbnailImage"
         />
+
+        {/* Use onClick instead of onclick and call handleDownload */}
+
+        <div onClick={handleDownload} className="absolute top-2 right-2">
+          <Button />
+        </div>
       </div>
     </div>
   );
 };
-
 export default ThumbnailCard;

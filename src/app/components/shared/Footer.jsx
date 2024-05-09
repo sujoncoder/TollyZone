@@ -5,14 +5,17 @@ const Footer = () => {
   const currentYear = getDate.getFullYear();
   return (
     <footer>
-      <section className="px-20 flex justify-between items-center bg-gradient-to-r from-slate-600 to-slate-700 py-10">
+      <section className="px-2 sm:px-20 grid grid-cols-2 sm:grid-cols-3 bg-gradient-to-r from-slate-600 to-slate-700 py-10">
         <nav className="flex flex-col space-y-2">
+          {/* service area  */}
           <h6 className="text-xl font-semibold text-slate-200">Services</h6>
           <a className="text-slate-300">Branding</a>
           <a className="text-slate-300">Design</a>
           <a className="text-slate-300">Marketing</a>
           <a className="text-slate-300">Advertisement</a>
         </nav>
+
+        {/* company area  */}
         <nav className="flex flex-col space-y-2">
           <h6 className="text-xl font-semibold text-slate-200">Company</h6>
           <a className="text-slate-300">About us</a>
@@ -20,7 +23,9 @@ const Footer = () => {
           <a className="text-slate-300">Jobs</a>
           <a className="text-slate-300">Press kit</a>
         </nav>
-        <nav>
+
+        {/* social area */}
+        <nav className="mt-4">
           <h6 className="text-xl font-semibold text-slate-200 my-2">Social</h6>
           <div className="flex space-x-4">
             <a>
