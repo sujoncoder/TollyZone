@@ -16,6 +16,14 @@ const AllServices = () => {
           <FaDownload />
           <span>YT-Thumbnail-Downloader</span>
         </Link>
+
+        <Link
+          className="flex justify-center items-center space-x-2 border p-2 rounded hover:bg-slate-200 duration-500 text-lg text-slate-500 font-semibold"
+          href="/githubuser"
+        >
+          <FaDownload />
+          <span>GitHub User</span>
+        </Link>
       </div>
     </div>
   );

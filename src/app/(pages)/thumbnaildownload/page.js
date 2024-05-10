@@ -33,11 +33,11 @@ const ThumbnailDownload = () => {
   }, [videoId]);
 
   return (
-    <>
+    <div className="px-2 sm:px-20">
       <TittleText />
       <SearchInput onSearchInput={handleInput} />
       <ThumbnailCard onThumbnailUrl={thumbnailUrl} onVideoId={videoId} />
-    </>
+    </div>
   );
 };
 
