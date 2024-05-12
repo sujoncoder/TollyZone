@@ -2,7 +2,7 @@ import { dateConverter } from "@/app/utils/date";
 import Image from "next/image";
 
 const UserInfo = ({ onUserData }) => {
-  const targetDate = dateConverter("created_at");
+  const joinedDate = dateConverter("created_at");
   return (
     <div className="flex justify-between py-6">
       <div className="flex space-x-4">
@@ -24,7 +24,7 @@ const UserInfo = ({ onUserData }) => {
 
       <div>
         <p className="text-slate-600">Joined</p>
-        <span>{onUserData.targetDate}</span>
+        <span>{onUserData.joinedDate}</span>
       </div>
     </div>
   );

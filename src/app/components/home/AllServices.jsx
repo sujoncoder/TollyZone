@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FaDownload } from "react-icons/fa";
+import AllServiceData from "@/app/utils/allServiceData";
+import Service from "./Service";
 
 const AllServices = () => {
   return (
@@ -8,22 +8,11 @@ const AllServices = () => {
         Our Services
       </h1>
 
-      <div className="grid grid-cols-4 gap-4 my-10">
-        <Link
-          className="flex justify-center items-center space-x-2 border p-2 rounded hover:bg-slate-200 duration-500 text-lg text-slate-500 font-semibold"
-          href="/thumbnaildownload"
-        >
-          <FaDownload />
-          <span>YT-Thumbnail-Downloader</span>
-        </Link>
-
-        <Link
-          className="flex justify-center items-center space-x-2 border p-2 rounded hover:bg-slate-200 duration-500 text-lg text-slate-500 font-semibold"
-          href="/githubuser"
-        >
-          <FaDownload />
-          <span>GitHub User</span>
-        </Link>
+      {/* all service map and sent data to service component  */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-10">
+        {AllServiceData.map((service) => (
+          <Service service={service} key={service.id} />
+        ))}
       </div>
     </div>
   );
