@@ -5,26 +5,23 @@ import { IoQrCodeOutline } from "react-icons/io5";
 // id generator
 const id = crypto.randomUUID();
 
-// Define icon size
-const iconSize = "w-16 h-16 text-slate-700";
-
 const AllServiceData = [
   {
     id: id,
     tittle: "YTT-Download",
-    icon: <FaDownload className={iconSize} />,
+    icon: <FaDownload />,
     link: "/thumbnaildownload",
   },
   {
     id: id,
     tittle: "Github User",
-    icon: <BsGithub className={iconSize} />,
+    icon: <BsGithub />,
     link: "/githubuser",
   },
   {
     id: id,
     tittle: "Qr Generator",
-    icon: <IoQrCodeOutline className={iconSize} />,
+    icon: <IoQrCodeOutline />,
     link: "/qrcode",
   },
 ];

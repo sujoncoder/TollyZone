@@ -1,7 +1,7 @@
 import { saveAs } from "file-saver";
 import Image from "next/image";
-import ThumbnailImage from "../../../../public/assets/Thumbnail.png";
-import Button from "../shared/Button";
+import ThumbnailImage from "../../../public/assets/Thumbnail.png";
+import CustomBtn from "../shared/CustomBtn";
 
 const ThumbnailCard = ({ onThumbnailUrl, onVideoId }) => {
   const handleDownload = () => {
@@ -22,7 +22,7 @@ const ThumbnailCard = ({ onThumbnailUrl, onVideoId }) => {
         {/* Use onClick instead of onclick and call handleDownload */}
 
         <div onClick={handleDownload} className="absolute top-2 right-2">
-          <Button />
+          <CustomBtn myStyle={"active:bg-blue-400"}>Download</CustomBtn>
         </div>
       </div>
     </div>

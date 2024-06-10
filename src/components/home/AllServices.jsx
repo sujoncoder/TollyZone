@@ -1,4 +1,4 @@
-import AllServiceData from "@/app/utils/allServiceData";
+import AllServiceData from "@/utils/allServiceData";
 import Service from "./Service";
 
 const AllServices = () => {

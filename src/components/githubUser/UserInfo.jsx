@@ -1,4 +1,4 @@
-import { dateConverter } from "@/app/utils/date";
+import dateConverter from "@/utils/dateConverter";
 import Image from "next/image";
 
 const UserInfo = ({ onUserData }) => {

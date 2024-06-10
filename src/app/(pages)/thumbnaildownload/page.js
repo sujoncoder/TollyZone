@@ -1,8 +1,8 @@
 "use client";
 
-import SearchInput from "@/app/components/shared/SearchInput";
-import ThumbnailCard from "@/app/components/thumbnailDownloader/ThumbnailCard";
-import TittleText from "@/app/components/thumbnailDownloader/TittleText";
+import SearchInput from "@/components/shared/SearchInput";
+import ThumbnailCard from "@/components/thumbnailDownloader/ThumbnailCard";
+import TittleText from "@/components/thumbnailDownloader/TittleText";
 import { useEffect, useState } from "react";
 
 const ThumbnailDownload = () => {

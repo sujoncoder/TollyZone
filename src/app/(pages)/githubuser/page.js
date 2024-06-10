@@ -1,12 +1,12 @@
 "use client";
 
-import Heading from "@/app/components/githubUser/Heading";
-import Search from "@/app/components/githubUser/Search";
-import UserCard from "@/app/components/githubUser/UserCard";
+import Heading from "@/components/githubUser/Heading";
+import Search from "@/components/githubUser/Search";
+import UserCard from "@/components/githubUser/UserCard";
 import { useEffect, useState } from "react";
 
 const GithubUser = () => {
-  const [searchUser, setSearchUser] = useState("");
+  const [searchUser, setSearchUser] = useState("sujoncoder");
   const [userData, setUserData] = useState("");
   const [error, setError] = useState(null);
 

@@ -1,4 +1,4 @@
-import AllServices from "./components/home/AllServices";
+import AllServices from "@/components/home/AllServices";
 
 export default function Home() {
   return (

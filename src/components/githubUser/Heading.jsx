@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CoderImage from "../../../../public/assets/coder.png";
+import CoderImage from "../../../public/assets/coder.png";
 
 const Heading = () => {
   return (
